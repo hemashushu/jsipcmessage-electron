@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IPC Message - Electron</title>
+    <style>
+        section {
+            margin-bottom: 36px;
+        }
+
+        .window-id {
+            background-color: lightpink;
+        }
+
+        .window-list {
+            background-color: lightcyan;
+        }
+
+        .message {
+            font-size: 1.2em;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>IPC Message Test</h1>
+    <section>
+        <h2>Current window id</h2>
+        <span class="window-id"></span>
+    </section>
+    <section>
+        <h2>Create new window</h2>
+        <input type="button" name="create" value="Create">
+    </section>
+    <section>
+        <h2>List all window</h2>
+        <input type="button" name="list" value="List">
+        <span class="window-list"></span>
+    </section>
+    <section>
+        <h2>Send message to window</h2>
+        <label>Dest window id: <input type="text" name="window-id" value="1"></label>
+        <label>Text: <input type="text" name="text-content" value="hello"></label>
+        <input type="button" name="send" value="Send">
+    </section>
+    <section>
+        <h2>Receive message from backend</h2>
+        <span class="message">...</span>
+    </section>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
